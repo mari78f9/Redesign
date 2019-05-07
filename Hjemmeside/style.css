@@ -4,6 +4,10 @@
     justify-content: flex-end;
 }
 
+#hamburger-5 {
+    list-style-type: none;
+}
+
 .hamburger .line {
     width: 50px;
     height: 5px;
@@ -70,3 +74,8 @@
     -o-transform: translateY(-15px) rotate(-45deg);
     transform: translateY(-15px) rotate(-45deg);
 }
+
+@media only screen and (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
