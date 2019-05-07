@@ -1,3 +1,7 @@
+img {
+    width: 100%;
+}
+
 /*burger menu*/
 .three_col {
     display: flex;
