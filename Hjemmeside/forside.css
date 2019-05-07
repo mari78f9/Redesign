@@ -1,4 +1,4 @@
-.container {
+.bachboks {
     position: relative;
     width: 50%;
 }
@@ -22,12 +22,12 @@
     background-color: #D9A5A0;
 }
 
-.container:hover .overlay {
+.bachboks:hover .overlay {
     opacity: 1;
 }
 
 .text {
-    color: white;
+    color: #ECEAEE;
     font-size: 20px;
     position: absolute;
     top: 50%;
@@ -37,7 +37,6 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: 'Questrial', sans-serif;
-    font-size: 1rem;
 }
 
 /*knap*/
