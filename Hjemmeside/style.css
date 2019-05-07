@@ -2,6 +2,10 @@ img {
     width: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
 /*burger menu*/
 .three_col {
     display: flex;
