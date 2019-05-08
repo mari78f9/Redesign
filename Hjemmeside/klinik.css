@@ -196,9 +196,12 @@ footer .col {
     flex-direction: column;
     justify-content: space-between;
     margin: 0 50;
+    padding-left: 7vw;
 }
 
 .facebook {
     width: 40px;
     height: 40px;
+    padding-top: 3vw;
+    padding-left: 2.5vw;
 }
