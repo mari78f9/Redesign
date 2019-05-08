@@ -129,6 +129,15 @@ h1 {
     text-align: center;
     padding: 0;
     margin: 0;
+    margin-top: 0.1vw;
+}
+
+h3 {
+    font-family: 'Questrial',
+        sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.1vw;
 }
 
 p {
@@ -136,6 +145,7 @@ p {
         sans-serif;
     font-size: 1rem;
     line-height: 150%;
+    margin-top: 2.9vw;
 }
 
 /* Klinik.html*/
@@ -158,8 +168,6 @@ p {
     flex-basis: 200px;
     padding: 50px;
 
-
-
 }
 
 #klinik .txt {
@@ -172,6 +180,25 @@ p {
 #klinik .bottom {
     display: flex;
     flex-wrap: wrap;
+}
 
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(68, 89, 159, 0.27);
+}
 
+footer .col {
+    flex-grow: 1;
+    flex-basis: 200px;
+    /*Child*/
+    Display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 50;
+}
+
+.facebook {
+    width: 40px;
+    height: 40px;
 }
