@@ -7,6 +7,10 @@ img {
     display: none;
 }
 
+.logo {
+    width: 100px;
+}
+
 /*burger menu*/
 .three_col {
     display: flex;
@@ -158,6 +162,7 @@ img {
 #om .txt {
     flex-grow: 1;
     flex-basis: 300px;
+    padding: 50px;
 
 }
 
@@ -192,7 +197,9 @@ p {
 #footer {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(68, 89, 159, 0.27);
+    background-color: #eceaee;
+
+
 }
 
 footer .col {
