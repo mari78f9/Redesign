@@ -134,6 +134,33 @@ img {
 
 }
 
+.video {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 50px;
+}
+
+.mig {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#om .image {
+    flex-grow: 1;
+    flex-basis: 200px;
+    padding: 50px;
+
+}
+
+#om .txt {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+}
+
 /*font*/
 
 h1 {
