@@ -1,1 +1,177 @@
+img {
+    width: 100%;
+    height: auto;
+}
 
+.hidden {
+    display: none;
+}
+
+/*burger menu*/
+.three_col {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hamburger-5 {
+    list-style-type: none;
+}
+
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.five {
+    width: 40.73%;
+}
+
+#hamburger-5.is-active {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#hamburger-5.is-active .line:nth-child(2) {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+#hamburger-5 .line:nth-child(2) {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+
+#hamburger-5.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger-5.is-active .line:nth-child(1),
+#hamburger-5.is-active .line:nth-child(3) {
+    width: 35px;
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
+    transform-origin: right;
+}
+
+#hamburger-5.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(15px) rotate(45deg);
+    -ms-transform: translateY(15px) rotate(45deg);
+    -o-transform: translateY(15px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
+}
+
+#hamburger-5.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-15px) rotate(-45deg);
+    -ms-transform: translateY(-15px) rotate(-45deg);
+    -o-transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+@media only screen and (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+
+    /*  top menu*/
+    .topnav {
+        background-color: #306073;
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+}
+
+/*font*/
+
+h1 {
+    font-family: 'Questrial',
+        sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-family: 'Questrial',
+        sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+/* Klinik.html*/
+
+.baggrund {
+    padding: 50px;
+}
+
+#klinik img {
+    width: 100%;
+}
+
+#klinik .top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#klinik .image {
+    flex-grow: 1;
+    flex-basis: 200px;
+    padding: 50px;
+
+
+
+}
+
+#klinik .txt {
+    flex-grow: 1;
+    flex-basis: 300px;
+
+}
+
+
+#klinik .bottom {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
