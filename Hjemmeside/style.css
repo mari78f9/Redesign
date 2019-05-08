@@ -116,3 +116,49 @@ img {
     .topnav a.active {
         background-color: #4CAF50;
         color: white;
+    }
+}
+
+/* Klinik.html*/
+
+#klinik img {
+    width: 100%;
+}
+
+#klinik .col_wide {
+    flex-grow: 3;
+    flex-basis: 300px;
+    margin: 0 50;
+}
+
+#klinik .top {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+#klinik .image {
+    flex-grow: 1;
+    flex-basis: 200px;
+    flex-wrap: wrap;
+
+}
+
+#klinik .txt {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+
+#klinik .bottom {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+/*#klinik .col_narrow {
+    flex-grow: 1;
+    flex-basis: 300px;
+    margin: 0 50;
+}*/
