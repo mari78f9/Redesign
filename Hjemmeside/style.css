@@ -45,7 +45,7 @@ img {
     transform-origin: top right;
 }
 
-.burgermenu{
+.burgermenu {
     display: flex;
     align-items: flex-end;
     text-align: right;
@@ -76,7 +76,7 @@ img {
 .topnav {
     background-color: #306073;
     overflow: hidden;
-    justify-content:center;
+    justify-content: center;
     display: flex;
 }
 
@@ -317,6 +317,7 @@ h7 {
     padding: 50px;
 
 }
+
 .mig {
     display: flex;
     flex-wrap: wrap;
@@ -335,6 +336,7 @@ h7 {
         display: none;
     }
 }
+
 @media only screen and (min-width:800px) {
     .mig {
         flex-direction: row;
@@ -364,7 +366,7 @@ h7 {
 #klinik .txt {
     flex-grow: 1;
     flex-basis: 300px;
-     padding: 20px;
+    padding: 20px;
 
 }
 
@@ -413,6 +415,14 @@ h7 {
     color: #306073;
     font-weight: bold;
     padding: 10px;
+}
+
+#behandlinger .image {
+    flex-basis: 500px;
+}
+
+#behandlinger .txt {
+    flex-basis: 500px;
 }
 
 @media only screen and (min-width: 700px) {
