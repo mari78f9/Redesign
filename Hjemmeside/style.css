@@ -119,46 +119,136 @@ img {
     }
 }
 
-/* Klinik.html*/
+.miniSplash {
+    position: relative;
+    text-align: center;
+    color: #306073;
+}
+
+.midt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+/***************************************** om mig ********************************************/
+.video {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 50px;
+}
+
+.mig {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#om .image {
+    flex-grow: 1;
+    flex-basis: 200px;
+    padding: 50px;
+
+}
+
+#om .txt {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 50px;
+
+}
+
+
+/*************************************************** Klinik.html****************************************/
 
 #klinik img {
     width: 100%;
 }
 
-#klinik .col_wide {
-    flex-grow: 3;
-    flex-basis: 300px;
-    margin: 0 50;
-}
-
 #klinik .top {
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 #klinik .image {
     flex-grow: 1;
     flex-basis: 200px;
-    flex-wrap: wrap;
+    padding: 50px;
 
 }
 
 #klinik .txt {
     flex-grow: 1;
     flex-basis: 300px;
+
 }
 
 
 #klinik .bottom {
     display: flex;
     flex-wrap: wrap;
+}
+
+
+
+
+/*******************************************font*************************************/
+
+h1 {
+    font-family: 'Questrial',
+        sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.1vw;
+}
+
+h3 {
+    font-family: 'Questrial',
+        sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.1vw;
+}
+
+p {
+    font-family: 'Questrial',
+        sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+    margin-top: 2.9vw;
+}
+
+/***************************************footer**********************************/
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eceaee;
 
 
 }
 
-/*#klinik .col_narrow {
+footer .col {
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 200px;
+    /*Child*/
+    Display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 50;
-}*/
+    padding-left: 7vw;
+}
+
+.facebook {
+    width: 40px;
+    height: 40px;
+    padding-top: 3vw;
+    padding-left: 2.5vw;
+}
