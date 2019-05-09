@@ -16,7 +16,10 @@ img {
 }
 
 .logo {
-    width: 10vw;
+    width: 5vw;
+    height: 5.5vw;
+    display: flex;
+
 }
 
 /*burger menu*/
@@ -25,16 +28,30 @@ img {
     transform: scale(0);
     transform: translateX(-100%);
     opacity: 0;
+
 }
 
 #menuknap {
+    display: flex;
     display: inline-block;
+    left: 75vw;
+
 }
 
 #menu {
     list-style-type: none;
     transition: transform .3s;
     transform-origin: top right;
+}
+
+.burgermenu{
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-end;
+    margin: 1vw 4vw;
+
+
 
 }
 
