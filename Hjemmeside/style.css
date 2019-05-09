@@ -76,7 +76,7 @@ img {
 .topnav {
     background-color: #306073;
     overflow: hidden;
-    justify-content:space-between;
+    justify-content:center;
     display: flex;
 }
 
