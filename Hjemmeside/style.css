@@ -15,157 +15,42 @@ img {
     display: none;
 }
 
+.logo {
+    width: 10vw;
+}
+
 /*burger menu*/
-a {
-    text-decoration: none;
-    color: #232323;
-
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #d99d55;
-}
-
-#menuToggle {
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-
-    z-index: 1;
-
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-
-    cursor: pointer;
-
+#menu .hidden {
+    display: none;
+    transform: scale(0);
+    transform: translateX(-100%);
     opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-
-    background: #cdcdcd;
-    border-radius: 3px;
-
-    z-index: 1;
-
-    transform-origin: 4px 0px;
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity 0.55s ease;
+#menuknap {
+    display: inline-block;
 }
 
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: Blue;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#hamburger-5.is-active .line:nth-child(1),
-#hamburger-5.is-active .line:nth-child(3) {
-    width: 35px;
-    -webkit-transform-origin: right;
-    -moz-transform-origin: right;
-    -ms-transform-origin: right;
-    -o-transform-origin: right;
-    transform-origin: right;
-}
-
-#hamburger-5.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(15px) rotate(45deg);
-    -ms-transform: translateY(15px) rotate(45deg);
-    -o-transform: translateY(15px) rotate(45deg);
-    transform: translateY(15px) rotate(45deg);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
-    position: absolute;
-    width: 300px;
-    margin: -50px 0 0 -50px;
-    padding: 40px;
-    padding-top: 100px;
-
-    background: #ededed;
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+    transition: transform .3s;
+    transform-origin: top right;
 
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-
-#menu li {
-    padding: 10px 0;
-    font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-    transform: none;
 }
 
 @media only screen and (min-width: 700px) {
-    .hamburger {
+
+    #menuknap {
         display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
     }
 }
 
@@ -214,6 +99,12 @@ a:hover {
 
 }
 
+@media only screen and (max-width: 700px) {
+    .topnav {
+        display: none;
+    }
+}
+
 /*****************************************Forside*********************/
 bachtxt,
 zonetxt,
@@ -228,14 +119,15 @@ h8 {
 
 .typer {
     text-align: center;
-    background-color: #BCBFAE;
+    padding: 30px;
+
 }
 
 .typer,
 h7 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: 'Questrial', sans-serif;
-    color: white;
+    color: #BCBFAE;
 }
 
 .boks {
@@ -367,8 +259,20 @@ h7 {
     opacity: 1;
 }
 
+@media only screen and (min-width: 700px) {
+    .containerboks {
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .b {
+        flex-wrap: nowrap;
+    }
+}
+
 /***************************************** om mig ********************************************/
-.video {
+#video {
     display: flex;
     position: relative;
     justify-content: center;
@@ -395,7 +299,29 @@ h7 {
     padding: 50px;
 
 }
+.mig {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
+
+@media only screen and (min-width:700px) {
+    .video_mobil {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .desk {
+        display: none;
+    }
+}
+@media only screen and (min-width:800px) {
+    .mig {
+        flex-direction: row;
+    }
+}
 
 /*************************************************** Klinik.html****************************************/
 
@@ -406,18 +332,21 @@ h7 {
 #klinik .top {
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
+    flex-direction: column;
 }
 
 #klinik .image {
     flex-grow: 1;
     flex-basis: 200px;
-    padding: 50px;
+    padding: 20px;
 
 }
 
 #klinik .txt {
     flex-grow: 1;
     flex-basis: 300px;
+     padding: 20px;
 
 }
 
@@ -425,6 +354,19 @@ h7 {
 #klinik .bottom {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:900px) {
+    #klinik .bottom {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    #klinik .top {
+        flex-direction: row;
+    }
 }
 
 /**************************************Behandlinger***********************************/
@@ -433,6 +375,7 @@ h7 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .colb {
@@ -444,6 +387,7 @@ h7 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #behandlinger p {
@@ -453,11 +397,28 @@ h7 {
     padding: 10px;
 }
 
+@media only screen and (min-width: 700px) {
+    .containerboks {
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .b {
+        flex-wrap: nowrap;
+    }
+}
+
 
 /*******************************************font*************************************/
+#menu {
+    font-family: 'Questrial', sans-serif;
+}
+
 
 h1 {
     font-family: 'Questrial', sans-serif;
+    color: #306073;
     font-size: 2rem;
     text-align: center;
     padding: 0;
@@ -468,6 +429,7 @@ h1 {
 h3 {
     font-family: 'Questrial',
         sans-serif;
+    color: #306073;
     padding: 0;
     margin: 0;
     margin-top: 0.1vw;
@@ -476,6 +438,7 @@ h3 {
 p {
     font-family: 'Questrial',
         sans-serif;
+    color: #306073;
     font-size: 1rem;
     line-height: 150%;
     margin-top: 2.9vw;
@@ -485,19 +448,19 @@ p {
 #kontakt .container1 {
     display: flex;
     flex-direction: row;
-    padding: 150px;
+    padding: 100px;
     justify-content: space-around;
 }
 
 .col1 {
     flex-basis: 700px;
-    margin: 30px;
+    margin: 10px;
 
 }
 
 .col2 {
     flex-basis: 700px;
-    margin: 30px;
+    margin: 10px;
 }
 
 input[type=text],
@@ -541,6 +504,11 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
+@media only screen and (max-width: 900px) {
+    #kontakt .container1 {
+        flex-direction: column;
+    }
+}
 
 /***************************************footer**********************************/
 #footer {
@@ -565,6 +533,4 @@ footer .col {
 .facebook {
     width: 40px;
     height: 40px;
-    padding-top: 3vw;
-    padding-left: 2.5vw;
 }

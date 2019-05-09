@@ -10,11 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div class="topnav">
+            <div class="logo">
+                <img src="images/Artboard%203-kopi.png" alt="logo">
+            </div>
             <nav>
                 <a href="index.html">Forside</a>
                 <a href="om.html">Om mig</a>
@@ -23,45 +27,30 @@
                 <a href="kontakt.html">Kontakt</a>
             </nav>
         </div>
-    </header>
-    <!--burger menu-->
-    <nav role="navigation">
-        <div id="menuToggle">
-            <input type="checkbox" />
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-            <ul id="menu">
-                <a href="index.html">
-                    <li>Forside</li>
-                </a>
-                <a href="om.html">
-                    <li>Om mig</li>
-                </a>
-                <a href="klinik.html">
-                    <li>klinik</li>
-                </a>
-                <a href="behandlinger.html">
-                    <li>behandlinger</li>
-                </a>
-                <a href="kontakt.html">
-                    <li>kontakt</li>
-                </a>
+        <!--burger menu-->
+        <nav>
+            <div id="menuknap">☰</div>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">Forside</a></li>
+                <li> <a href="Om.html">Om mig</a></li>
+                <li> <a href="klinik.html">Om kliniken</a></li>
+                <li> <a href="behandlinger.html">Behandlinger</a></li>
+                <li> <a href="kontakt.html">Kontakt</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
+
     <section id="forside" class="baggrund">
         <div class="menu">
-            <div class="logo"></div>
+
             <div class="burgermenu"></div>
         </div>
         <div class="billedemenu">
             <div class="container1">
                 <div class="w3-content w3-section" style="max-width:1536px">
                     <img class="mySlides" src="images/Artboard%201%20(1).png" style="width:100%" class="image1">
-                    <img class="mySlides" src="images/Artboard%202%20(1).jpg" style="width:100%" class="image1">
+                    <img class="mySlides" src="images/Artboard%202.jpg" style="width:100%" class="image1">
                     <img class="mySlides" src="images/Artboard%206.png" style="width:100%" class="image1">
                     <div class="overlay1"><a href="klinik.html">Læs mere</a></div>
                 </div>
@@ -80,6 +69,7 @@
                     </div>
                 </div>
                 <div class="bachtxt">
+                    <h3>Bachs Blomsterremedier:</h3>
                     <h8>Bachs Blomsterremedier kan hjælpe til nervøsitet og andre ting som ellers kan gøre en ude af stand til ting.</h8>
                 </div>
             </div>
@@ -91,6 +81,7 @@
                     </div>
                 </div>
                 <div class="zonetxt">
+                    <h3> Zoneterapi:</h3>
                     <h8>Zoneterapi er hvor man trykker på forskellige zoner under fødderne som korresponderer med visse organer i kroppen.</h8>
                 </div>
             </div>
@@ -102,6 +93,7 @@
                     </div>
                 </div>
                 <div class="japtxt">
+                    <h3>Japansk lifting:</h3>
                     <h8>Japansk lifting er et naturligt ansigtsløft, som er en form for afstressende og muskelafspændende ansigtsbehandling.</h8>
                 </div>
             </div>
@@ -113,6 +105,7 @@
                     </div>
                 </div>
                 <div class="akutxt">
+                    <h3>Øreakupunktur:</h3>
                     <h8>Øreakupunktur er en gammel kinesisk praksis som kan hjælpe med bl.a. rygestop.</h8>
                 </div>
             </div>

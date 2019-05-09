@@ -1,32 +1,24 @@
 /*burger menu*/
-$(document).ready(function () {
-    $(".hamburger").click(function () {
-        $(this).toggleClass("is-active");
-    });
-});
 window.addEventListener("load", sidenVises);
 
 function sidenVises() {
     console.log("sidenVises");
-
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-
-
 }
-
 
 function toggleMenu() {
     console.log("toggleMenu");
     document.querySelector("#menu").classList.toggle("hidden");
 
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-
     if (erSkjult == true) {
-        document.querySelector("#menu").textContent = "☰";
+        document.querySelector("#menuknap").textContent = "☰";
     } else {
-        document.querySelector("#menu").textContent = "X";
+        document.querySelector("#menuknap").textContent = "X";
     }
 }
+
+
 /*billedemenu*/
 var myIndex = 0;
 carousel();
@@ -43,4 +35,13 @@ function carousel() {
     }
     x[myIndex - 1].style.display = "block";
     setTimeout(carousel, 5000);
+}
+
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
 }
