@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -12,56 +16,93 @@ img {
 }
 
 /*burger menu*/
-.three_col {
-    display: flex;
-    justify-content: flex-end;
+a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
 }
 
-#hamburger-5 {
-    list-style-type: none;
+a:hover {
+    color: #d99d55;
 }
 
-.hamburger .line {
-    width: 50px;
-    height: 5px;
-    background-color: black;
+#menuToggle {
     display: block;
-    margin: 8px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.hamburger:hover {
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
     cursor: pointer;
-}
 
-.five {
-    width: 40.73%;
-}
-
-#hamburger-5.is-active {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-#hamburger-5.is-active .line:nth-child(2) {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-}
-
-#hamburger-5 .line:nth-child(2) {
-    -webkit-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-}
-
-
-#hamburger-5.is-active .line:nth-child(2) {
     opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: Blue;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 #hamburger-5.is-active .line:nth-child(1),
@@ -81,47 +122,82 @@ img {
     transform: translateY(15px) rotate(45deg);
 }
 
-#hamburger-5.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-15px) rotate(-45deg);
-    -ms-transform: translateY(-15px) rotate(-45deg);
-    -o-transform: translateY(-15px) rotate(-45deg);
-    transform: translateY(-15px) rotate(-45deg);
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -50px 0 0 -50px;
+    padding: 40px;
+    padding-top: 100px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+    transform: none;
 }
 
 @media only screen and (min-width: 700px) {
     .hamburger {
         display: none;
     }
+}
 
-    /*  top menu*/
-    .topnav {
-        background-color: #306073;
-        overflow: hidden;
-        justify-content: center;
-        display: flex;
-    }
+/*************************************top menu**************************/
+.topnav {
+    background-color: #306073;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+}
 
-    /* Style the links inside the navigation bar */
-    .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        justify-content: center;
-        display: flex;
-    }
+/* Style the links inside the navigation bar */
+.topnav a {
+    font-family: 'Questrial', sans-serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    justify-content: center;
+    display: flex;
+}
 
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-    .topnav a.active {
-        background-color: #4CAF50;
-        color: white;
-    }
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .miniSplash {
@@ -351,14 +427,37 @@ h7 {
     flex-wrap: wrap;
 }
 
+/**************************************Behandlinger***********************************/
 
+.containerboks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colb {
+    flex-basis: 1000px;
+}
+
+.b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#behandlinger p {
+    font-family: 'Questrial', sans-serif;
+    color: #306073;
+    font-weight: bold;
+    padding: 10px;
+}
 
 
 /*******************************************font*************************************/
 
 h1 {
-    font-family: 'Questrial',
-        sans-serif;
+    font-family: 'Questrial', sans-serif;
     font-size: 2rem;
     text-align: center;
     padding: 0;
@@ -383,7 +482,7 @@ p {
 }
 
 /*****************************************kontakt********************************/
-.container1 {
+#kontakt .container1 {
     display: flex;
     flex-direction: row;
     padding: 150px;
@@ -400,39 +499,6 @@ p {
     flex-basis: 700px;
     margin: 30px;
 }
-
-
-
-/*kontakt menu*/
-.topnav {
-    background-color: #306073;
-    overflow: hidden;
-    justify-content: center;
-    display: flex;
-}
-
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    justify-content: center;
-    display: flex;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
 
 input[type=text],
 select,

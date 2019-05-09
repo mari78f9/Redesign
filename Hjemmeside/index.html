@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redesign</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="behandlinger.css">
-    <link rel="stylesheet" href="klinik.css">
-    <link rel="stylesheet" href="kontakt.css">
-    <link rel="stylesheet" href="om.css">
-    <link rel="stylesheet" href="forside.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
@@ -30,27 +25,31 @@
         </div>
     </header>
     <!--burger menu-->
-    <nav>
-        <div class="three_col">
-            <div class="hamburger" id="hamburger-5">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <ul id="menu" class="hidden">
-                    <li>
-                        <a href="om.html">Om mig</a>
-                    </li>
-                    <li>
-                        <a href="klinik.html">Om klinikken</a>
-                    </li>
-                    <li>
-                        <a href="behandlinger.html">Behandlinger</a>
-                    </li>
-                    <li>
-                        <a href="kontakt.html">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <a href="index.html">
+                    <li>Forside</li>
+                </a>
+                <a href="om.html">
+                    <li>Om mig</li>
+                </a>
+                <a href="klinik.html">
+                    <li>klinik</li>
+                </a>
+                <a href="behandlinger.html">
+                    <li>behandlinger</li>
+                </a>
+                <a href="kontakt.html">
+                    <li>kontakt</li>
+                </a>
+            </ul>
         </div>
     </nav>
     <section id="forside" class="baggrund">
