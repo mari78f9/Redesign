@@ -15,10 +15,11 @@ img {
     display: none;
 }
 
-.logo {
+.topnav #logo {
     width: 5vw;
-    height: 5.5vw;
-    display: flex;
+    height: 5.2vw;
+
+
 
 }
 
@@ -75,7 +76,7 @@ img {
 .topnav {
     background-color: #306073;
     overflow: hidden;
-    justify-content: center;
+    justify-content:space-between;
     display: flex;
 }
 
